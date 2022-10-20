@@ -33,9 +33,9 @@
        
        
         $('#btnD').click(function(e) {
-        btnAClick(e);
+           btnDClick(e);
         });
-
+        
 
         $('#btnB').click(function(e) {
             btnBClick(e);
@@ -159,8 +159,7 @@
     var active = false;
     var startTime = 0;
     var period = 0;
-
-    
+   
     // ボタンの初期設定
     function init(){
         $('#btnA').prop('disabled', false);
@@ -213,6 +212,7 @@
          
         active = true;
         startTime = new Date(); 
+        
 
      }
  
@@ -221,8 +221,10 @@
     if (active) {
         var time = parseInt( (new Date() - startTime)/1000 );
         var rest = period - time;
+        
         $("#time").html("経過時間： " + time);
         $("#remain").html("残り時間： " + rest);
+        $("#pls").html("???:" + rest );
         analog(rest);
     }
 
@@ -242,6 +244,7 @@
 
     <div id="remain">Remaining time</div>
     <div id="time">Time</div>
+    <div id="pls">pls</div>
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
     <button id="btnC">Set</button>
