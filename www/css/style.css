@@ -64,6 +64,12 @@
           font-size: 20px;
             position:absolute; top:500px; left:40%; width:30%; height:50px; 
      }
+     
+#btnD::after {
+  content: "▶";
+  color: red;
+  }
+
     #minute {
         font-size: 30px;
         position:absolute; top:450px; left:60px; width:80px; height:40px;   
